@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StartCollectionViewCell" customModule="timeToRead" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="163" height="44"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBY-7m-UqV">
+                        <rect key="frame" x="6" y="0.0" width="170" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="DJt-Pr-0BP"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="DaZ-oT-jaE"/>
+                        </constraints>
+                        <state key="normal" title="Iniciar Leitura"/>
+                        <connections>
+                            <action selector="startBt:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ZyW-Bh-fvY"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="VBY-7m-UqV" secondAttribute="top" id="Bsa-np-yyR"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="VBY-7m-UqV" secondAttribute="trailing" id="WbP-FL-zO3"/>
+                <constraint firstItem="VBY-7m-UqV" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="Y50-7N-Lf6"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="VBY-7m-UqV" secondAttribute="bottom" id="aJM-cf-ZvL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="163" height="44"/>
+            <connections>
+                <outlet property="startButton" destination="VBY-7m-UqV" id="ewX-Ri-rHe"/>
+            </connections>
+            <point key="canvasLocation" x="103.62318840579711" y="-5.3571428571428568"/>
+        </collectionViewCell>
+    </objects>
+</document>

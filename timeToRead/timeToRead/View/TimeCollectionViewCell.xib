@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TimeCollectionViewCell" customModule="timeToRead" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="231"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="325" height="231"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a70-Ao-1Ot">
+                        <rect key="frame" x="0.0" y="44" width="325" height="187"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuy-I1-3p7">
+                                <rect key="frame" x="63" y="53" width="200" height="82"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="yuy-I1-3p7" secondAttribute="bottom" constant="52" id="2j8-Aw-8CM"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="176" id="Juo-3v-G3y"/>
+                            <constraint firstItem="yuy-I1-3p7" firstAttribute="leading" secondItem="a70-Ao-1Ot" secondAttribute="leading" constant="63" id="a6V-in-qvw"/>
+                            <constraint firstItem="yuy-I1-3p7" firstAttribute="top" secondItem="a70-Ao-1Ot" secondAttribute="top" constant="53" id="dVO-md-nZh"/>
+                            <constraint firstAttribute="trailing" secondItem="yuy-I1-3p7" secondAttribute="trailing" constant="62" id="eko-rM-0jD"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="t07-3J-xuS"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="a70-Ao-1Ot" secondAttribute="top" id="V8J-Us-kq4"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="a70-Ao-1Ot" secondAttribute="bottom" id="eRx-gz-MJA"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="a70-Ao-1Ot" secondAttribute="trailing" id="gSU-bm-cAw"/>
+                <constraint firstItem="a70-Ao-1Ot" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="jsF-xC-fcf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="325" height="231"/>
+            <connections>
+                <outlet property="labelTimer" destination="yuy-I1-3p7" id="6Fb-Wc-jR9"/>
+                <outlet property="viewTimer" destination="a70-Ao-1Ot" id="Hzj-u5-emA"/>
+            </connections>
+            <point key="canvasLocation" x="335.50724637681162" y="189.17410714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>
