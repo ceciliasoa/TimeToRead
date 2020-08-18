@@ -34,9 +34,9 @@ class NumPageCollectionViewCell: UICollectionViewCell {
         percentegeButton.setTitleColor(.textColor, for: .normal)
         percentegeButton.setTitleColor(.textColor, for: .selected)
         textFieldNumPage.backgroundColor = .white
-        textFieldNumPage.borderStyle = .none
-        
-      
+        textFieldNumPage.borderStyle = .roundedRect
+        textFieldNumPage.tintColor = .secundaryColor
+        textFieldNumPage.textColor = .textColor
         
 
 //        percentegeButton.setTitle("oioi", for: .normal)

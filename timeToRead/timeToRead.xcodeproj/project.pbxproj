@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18E955B34A84041150BC5394 /* Pods_timeToRead_timeToReadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FF2742C0CBFB8D526B4C94 /* Pods_timeToRead_timeToReadUITests.framework */; };
+		1F32720BB09405CED91D9C6E /* Pods_timeToReadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DE4A12D0816CCF92764A2 /* Pods_timeToReadTests.framework */; };
 		D7003C1624E58D8A00967FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7003C1524E58D8A00967FF9 /* AppDelegate.swift */; };
 		D7003C1824E58D8A00967FF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7003C1724E58D8A00967FF9 /* SceneDelegate.swift */; };
 		D7003C1D24E58D8A00967FF9 /* Time.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7003C1B24E58D8A00967FF9 /* Time.storyboard */; };
@@ -15,8 +17,6 @@
 		D7003C2D24E58D8C00967FF9 /* timeToReadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7003C2C24E58D8C00967FF9 /* timeToReadTests.swift */; };
 		D7003C3824E58D8C00967FF9 /* timeToReadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7003C3724E58D8C00967FF9 /* timeToReadUITests.swift */; };
 		D7003C4924E5C94800967FF9 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7003C4824E5C94800967FF9 /* TabBar.storyboard */; };
-		D7003C4D24E5CDE400967FF9 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7003C4C24E5CDE400967FF9 /* Library.storyboard */; };
-		D7003C4F24E5CEC300967FF9 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7003C4E24E5CEC300967FF9 /* LibraryViewController.swift */; };
 		D7003C5124E5D0BB00967FF9 /* colorsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7003C5024E5D0BB00967FF9 /* colorsApp.swift */; };
 		D7003C5324E6BA9400967FF9 /* TimeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7003C5224E6BA9400967FF9 /* TimeCollectionViewController.swift */; };
 		D7003C5524E6BDEC00967FF9 /* fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7003C5424E6BDEC00967FF9 /* fonts.swift */; };
@@ -28,8 +28,23 @@
 		D7003C6124E6D79100967FF9 /* CurrentPageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7003C6024E6D79100967FF9 /* CurrentPageCollectionViewController.swift */; };
 		D7003C6424E6D85800967FF9 /* NumPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7003C6224E6D85800967FF9 /* NumPageCollectionViewCell.swift */; };
 		D7003C6524E6D85800967FF9 /* NumPageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7003C6324E6D85800967FF9 /* NumPageCollectionViewCell.xib */; };
+		D7109ECE24EAF3DC00C321E8 /* StopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7109ECC24EAF3DC00C321E8 /* StopCollectionViewCell.swift */; };
+		D7109ECF24EAF3DC00C321E8 /* StopCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7109ECD24EAF3DC00C321E8 /* StopCollectionViewCell.xib */; };
+		D7109ED724EB168C00C321E8 /* FinalPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7109ED624EB168C00C321E8 /* FinalPage.storyboard */; };
+		D7109EDB24EB189E00C321E8 /* FinalPageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7109EDA24EB189E00C321E8 /* FinalPageCollectionViewController.swift */; };
+		D7109EDE24EB1A5B00C321E8 /* SearchBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7109EDC24EB1A5B00C321E8 /* SearchBookCollectionViewCell.swift */; };
+		D7109EDF24EB1A5B00C321E8 /* SearchBookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7109EDD24EB1A5B00C321E8 /* SearchBookCollectionViewCell.xib */; };
+		D75DAA6D24EBF82A00247CE0 /* PagesBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75DAA6B24EBF82A00247CE0 /* PagesBookCollectionViewCell.swift */; };
+		D75DAA6E24EBF82A00247CE0 /* PagesBookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75DAA6C24EBF82A00247CE0 /* PagesBookCollectionViewCell.xib */; };
+		D75DAA7024EC19DE00247CE0 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75DAA6F24EC19DE00247CE0 /* Result.storyboard */; };
+		D75DAA7224EC1ACB00247CE0 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75DAA7124EC1ACB00247CE0 /* ResultTableViewController.swift */; };
+		D75DAA7724EC270D00247CE0 /* ChartCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75DAA7524EC270D00247CE0 /* ChartCellTableViewCell.swift */; };
+		D75DAA7824EC270D00247CE0 /* ChartCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75DAA7624EC270D00247CE0 /* ChartCellTableViewCell.xib */; };
+		D75DAA7B24EC3D7400247CE0 /* ResultButtomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75DAA7924EC3D7400247CE0 /* ResultButtomTableViewCell.swift */; };
+		D75DAA7C24EC3D7400247CE0 /* ResultButtomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75DAA7A24EC3D7400247CE0 /* ResultButtomTableViewCell.xib */; };
 		D7A1E35824E989BE00A72F8B /* RunningTime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A1E35724E989BE00A72F8B /* RunningTime.storyboard */; };
 		D7A1E35A24E98A4000A72F8B /* RunnigCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1E35924E98A4000A72F8B /* RunnigCollectionViewController.swift */; };
+		F7B1140849E65B73C85A7370 /* Pods_timeToRead.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7689323B0FD406C957EF48 /* Pods_timeToRead.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +65,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19FF2742C0CBFB8D526B4C94 /* Pods_timeToRead_timeToReadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_timeToRead_timeToReadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4972A81AF4D802212EEBB2D3 /* Pods-timeToRead.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeToRead.release.xcconfig"; path = "Target Support Files/Pods-timeToRead/Pods-timeToRead.release.xcconfig"; sourceTree = "<group>"; };
+		5C7689323B0FD406C957EF48 /* Pods_timeToRead.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_timeToRead.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		638A22DBBEFEF44BC19D6649 /* Pods-timeToReadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeToReadTests.debug.xcconfig"; path = "Target Support Files/Pods-timeToReadTests/Pods-timeToReadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7715DE6F6D39EBDB8FD9D84A /* Pods-timeToReadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeToReadTests.release.xcconfig"; path = "Target Support Files/Pods-timeToReadTests/Pods-timeToReadTests.release.xcconfig"; sourceTree = "<group>"; };
+		7FDF190DA54B05D5BF33F76B /* Pods-timeToRead.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeToRead.debug.xcconfig"; path = "Target Support Files/Pods-timeToRead/Pods-timeToRead.debug.xcconfig"; sourceTree = "<group>"; };
+		AD7DE4A12D0816CCF92764A2 /* Pods_timeToReadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_timeToReadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7003C1224E58D8A00967FF9 /* timeToRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timeToRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7003C1524E58D8A00967FF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7003C1724E58D8A00967FF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,8 +86,6 @@
 		D7003C3724E58D8C00967FF9 /* timeToReadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeToReadUITests.swift; sourceTree = "<group>"; };
 		D7003C3924E58D8C00967FF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7003C4824E5C94800967FF9 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
-		D7003C4C24E5CDE400967FF9 /* Library.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
-		D7003C4E24E5CEC300967FF9 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		D7003C5024E5D0BB00967FF9 /* colorsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorsApp.swift; sourceTree = "<group>"; };
 		D7003C5224E6BA9400967FF9 /* TimeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCollectionViewController.swift; sourceTree = "<group>"; };
 		D7003C5424E6BDEC00967FF9 /* fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fonts.swift; sourceTree = "<group>"; };
@@ -77,8 +97,24 @@
 		D7003C6024E6D79100967FF9 /* CurrentPageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPageCollectionViewController.swift; sourceTree = "<group>"; };
 		D7003C6224E6D85800967FF9 /* NumPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		D7003C6324E6D85800967FF9 /* NumPageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumPageCollectionViewCell.xib; sourceTree = "<group>"; };
+		D7109ECC24EAF3DC00C321E8 /* StopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopCollectionViewCell.swift; sourceTree = "<group>"; };
+		D7109ECD24EAF3DC00C321E8 /* StopCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopCollectionViewCell.xib; sourceTree = "<group>"; };
+		D7109ED624EB168C00C321E8 /* FinalPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinalPage.storyboard; sourceTree = "<group>"; };
+		D7109EDA24EB189E00C321E8 /* FinalPageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalPageCollectionViewController.swift; sourceTree = "<group>"; };
+		D7109EDC24EB1A5B00C321E8 /* SearchBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookCollectionViewCell.swift; sourceTree = "<group>"; };
+		D7109EDD24EB1A5B00C321E8 /* SearchBookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBookCollectionViewCell.xib; sourceTree = "<group>"; };
+		D75DAA6B24EBF82A00247CE0 /* PagesBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesBookCollectionViewCell.swift; sourceTree = "<group>"; };
+		D75DAA6C24EBF82A00247CE0 /* PagesBookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagesBookCollectionViewCell.xib; sourceTree = "<group>"; };
+		D75DAA6F24EC19DE00247CE0 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
+		D75DAA7124EC1ACB00247CE0 /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		D75DAA7524EC270D00247CE0 /* ChartCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCellTableViewCell.swift; sourceTree = "<group>"; };
+		D75DAA7624EC270D00247CE0 /* ChartCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartCellTableViewCell.xib; sourceTree = "<group>"; };
+		D75DAA7924EC3D7400247CE0 /* ResultButtomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultButtomTableViewCell.swift; sourceTree = "<group>"; };
+		D75DAA7A24EC3D7400247CE0 /* ResultButtomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultButtomTableViewCell.xib; sourceTree = "<group>"; };
 		D7A1E35724E989BE00A72F8B /* RunningTime.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RunningTime.storyboard; sourceTree = "<group>"; };
 		D7A1E35924E98A4000A72F8B /* RunnigCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnigCollectionViewController.swift; sourceTree = "<group>"; };
+		DAAA393668AF12C3BDA9662E /* Pods-timeToRead-timeToReadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeToRead-timeToReadUITests.debug.xcconfig"; path = "Target Support Files/Pods-timeToRead-timeToReadUITests/Pods-timeToRead-timeToReadUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F185C42EBFE63199BE18B67B /* Pods-timeToRead-timeToReadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeToRead-timeToReadUITests.release.xcconfig"; path = "Target Support Files/Pods-timeToRead-timeToReadUITests/Pods-timeToRead-timeToReadUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7B1140849E65B73C85A7370 /* Pods_timeToRead.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F32720BB09405CED91D9C6E /* Pods_timeToReadTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,12 +138,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E955B34A84041150BC5394 /* Pods_timeToRead_timeToReadUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75891C670F0E3F06D0F80E5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FDF190DA54B05D5BF33F76B /* Pods-timeToRead.debug.xcconfig */,
+				4972A81AF4D802212EEBB2D3 /* Pods-timeToRead.release.xcconfig */,
+				DAAA393668AF12C3BDA9662E /* Pods-timeToRead-timeToReadUITests.debug.xcconfig */,
+				F185C42EBFE63199BE18B67B /* Pods-timeToRead-timeToReadUITests.release.xcconfig */,
+				638A22DBBEFEF44BC19D6649 /* Pods-timeToReadTests.debug.xcconfig */,
+				7715DE6F6D39EBDB8FD9D84A /* Pods-timeToReadTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D7003C0924E58D8A00967FF9 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +166,8 @@
 				D7003C2B24E58D8C00967FF9 /* timeToReadTests */,
 				D7003C3624E58D8C00967FF9 /* timeToReadUITests */,
 				D7003C1324E58D8A00967FF9 /* Products */,
+				75891C670F0E3F06D0F80E5F /* Pods */,
+				E2E7FC7CCCD74137F7556486 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,12 +217,18 @@
 				D7003C4824E5C94800967FF9 /* TabBar.storyboard */,
 				D7003C1B24E58D8A00967FF9 /* Time.storyboard */,
 				D7003C2024E58D8B00967FF9 /* LaunchScreen.storyboard */,
-				D7003C4C24E5CDE400967FF9 /* Library.storyboard */,
 				D7003C5724E6C13000967FF9 /* TimeCollectionViewCell.xib */,
 				D7003C5B24E6CC1A00967FF9 /* StartCollectionViewCell.xib */,
 				D7003C5E24E6D56B00967FF9 /* CurrentPage.storyboard */,
 				D7003C6324E6D85800967FF9 /* NumPageCollectionViewCell.xib */,
 				D7A1E35724E989BE00A72F8B /* RunningTime.storyboard */,
+				D7109ECD24EAF3DC00C321E8 /* StopCollectionViewCell.xib */,
+				D7109ED624EB168C00C321E8 /* FinalPage.storyboard */,
+				D75DAA6C24EBF82A00247CE0 /* PagesBookCollectionViewCell.xib */,
+				D7109EDD24EB1A5B00C321E8 /* SearchBookCollectionViewCell.xib */,
+				D75DAA6F24EC19DE00247CE0 /* Result.storyboard */,
+				D75DAA7624EC270D00247CE0 /* ChartCellTableViewCell.xib */,
+				D75DAA7A24EC3D7400247CE0 /* ResultButtomTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,15 +247,31 @@
 			children = (
 				D7003C5224E6BA9400967FF9 /* TimeCollectionViewController.swift */,
 				D7003C6024E6D79100967FF9 /* CurrentPageCollectionViewController.swift */,
-				D7003C4E24E5CEC300967FF9 /* LibraryViewController.swift */,
+				D7109EDA24EB189E00C321E8 /* FinalPageCollectionViewController.swift */,
+				D75DAA7124EC1ACB00247CE0 /* ResultTableViewController.swift */,
 				D7003C5624E6C13000967FF9 /* TimeCollectionViewCell.swift */,
 				D7003C5A24E6CC1A00967FF9 /* StartCollectionViewCell.swift */,
 				D7003C6224E6D85800967FF9 /* NumPageCollectionViewCell.swift */,
 				D7003C1524E58D8A00967FF9 /* AppDelegate.swift */,
 				D7003C1724E58D8A00967FF9 /* SceneDelegate.swift */,
 				D7A1E35924E98A4000A72F8B /* RunnigCollectionViewController.swift */,
+				D7109ECC24EAF3DC00C321E8 /* StopCollectionViewCell.swift */,
+				D7109EDC24EB1A5B00C321E8 /* SearchBookCollectionViewCell.swift */,
+				D75DAA6B24EBF82A00247CE0 /* PagesBookCollectionViewCell.swift */,
+				D75DAA7524EC270D00247CE0 /* ChartCellTableViewCell.swift */,
+				D75DAA7924EC3D7400247CE0 /* ResultButtomTableViewCell.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E2E7FC7CCCD74137F7556486 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C7689323B0FD406C957EF48 /* Pods_timeToRead.framework */,
+				19FF2742C0CBFB8D526B4C94 /* Pods_timeToRead_timeToReadUITests.framework */,
+				AD7DE4A12D0816CCF92764A2 /* Pods_timeToReadTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,9 +281,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7003C3C24E58D8C00967FF9 /* Build configuration list for PBXNativeTarget "timeToRead" */;
 			buildPhases = (
+				88B7AA0786D86B67848457A0 /* [CP] Check Pods Manifest.lock */,
 				D7003C0E24E58D8A00967FF9 /* Sources */,
 				D7003C0F24E58D8A00967FF9 /* Frameworks */,
 				D7003C1024E58D8A00967FF9 /* Resources */,
+				B3C2D04ECD71C5EB61024250 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,6 +300,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7003C3F24E58D8C00967FF9 /* Build configuration list for PBXNativeTarget "timeToReadTests" */;
 			buildPhases = (
+				FAB6A2E2EE9535E76A8B1CAC /* [CP] Check Pods Manifest.lock */,
 				D7003C2424E58D8C00967FF9 /* Sources */,
 				D7003C2524E58D8C00967FF9 /* Frameworks */,
 				D7003C2624E58D8C00967FF9 /* Resources */,
@@ -239,9 +319,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7003C4224E58D8C00967FF9 /* Build configuration list for PBXNativeTarget "timeToReadUITests" */;
 			buildPhases = (
+				470757CC3DD24891BBCFBA75 /* [CP] Check Pods Manifest.lock */,
 				D7003C2F24E58D8C00967FF9 /* Sources */,
 				D7003C3024E58D8C00967FF9 /* Frameworks */,
 				D7003C3124E58D8C00967FF9 /* Resources */,
+				4BC5F312E665922112CC8C1C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,15 +383,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75DAA7824EC270D00247CE0 /* ChartCellTableViewCell.xib in Resources */,
+				D75DAA6E24EBF82A00247CE0 /* PagesBookCollectionViewCell.xib in Resources */,
 				D7003C4924E5C94800967FF9 /* TabBar.storyboard in Resources */,
 				D7A1E35824E989BE00A72F8B /* RunningTime.storyboard in Resources */,
 				D7003C5924E6C13000967FF9 /* TimeCollectionViewCell.xib in Resources */,
 				D7003C2224E58D8B00967FF9 /* LaunchScreen.storyboard in Resources */,
-				D7003C4D24E5CDE400967FF9 /* Library.storyboard in Resources */,
+				D7109ECF24EAF3DC00C321E8 /* StopCollectionViewCell.xib in Resources */,
+				D7109ED724EB168C00C321E8 /* FinalPage.storyboard in Resources */,
 				D7003C6524E6D85800967FF9 /* NumPageCollectionViewCell.xib in Resources */,
 				D7003C5D24E6CC1A00967FF9 /* StartCollectionViewCell.xib in Resources */,
+				D75DAA7024EC19DE00247CE0 /* Result.storyboard in Resources */,
+				D75DAA7C24EC3D7400247CE0 /* ResultButtomTableViewCell.xib in Resources */,
 				D7003C5F24E6D56B00967FF9 /* CurrentPage.storyboard in Resources */,
 				D7003C1F24E58D8B00967FF9 /* Assets.xcassets in Resources */,
+				D7109EDF24EB1A5B00C321E8 /* SearchBookCollectionViewCell.xib in Resources */,
 				D7003C1D24E58D8A00967FF9 /* Time.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,21 +418,130 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		470757CC3DD24891BBCFBA75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-timeToRead-timeToReadUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BC5F312E665922112CC8C1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-timeToRead-timeToReadUITests/Pods-timeToRead-timeToReadUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-timeToRead-timeToReadUITests/Pods-timeToRead-timeToReadUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-timeToRead-timeToReadUITests/Pods-timeToRead-timeToReadUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88B7AA0786D86B67848457A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-timeToRead-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3C2D04ECD71C5EB61024250 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-timeToRead/Pods-timeToRead-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-timeToRead/Pods-timeToRead-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-timeToRead/Pods-timeToRead-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAB6A2E2EE9535E76A8B1CAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-timeToReadTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7003C0E24E58D8A00967FF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75DAA7724EC270D00247CE0 /* ChartCellTableViewCell.swift in Sources */,
 				D7003C5324E6BA9400967FF9 /* TimeCollectionViewController.swift in Sources */,
 				D7003C1624E58D8A00967FF9 /* AppDelegate.swift in Sources */,
 				D7003C6424E6D85800967FF9 /* NumPageCollectionViewCell.swift in Sources */,
 				D7003C5524E6BDEC00967FF9 /* fonts.swift in Sources */,
 				D7A1E35A24E98A4000A72F8B /* RunnigCollectionViewController.swift in Sources */,
 				D7003C5C24E6CC1A00967FF9 /* StartCollectionViewCell.swift in Sources */,
-				D7003C4F24E5CEC300967FF9 /* LibraryViewController.swift in Sources */,
+				D75DAA7224EC1ACB00247CE0 /* ResultTableViewController.swift in Sources */,
 				D7003C5824E6C13000967FF9 /* TimeCollectionViewCell.swift in Sources */,
+				D7109ECE24EAF3DC00C321E8 /* StopCollectionViewCell.swift in Sources */,
+				D75DAA6D24EBF82A00247CE0 /* PagesBookCollectionViewCell.swift in Sources */,
 				D7003C6124E6D79100967FF9 /* CurrentPageCollectionViewController.swift in Sources */,
+				D75DAA7B24EC3D7400247CE0 /* ResultButtomTableViewCell.swift in Sources */,
+				D7109EDE24EB1A5B00C321E8 /* SearchBookCollectionViewCell.swift in Sources */,
 				D7003C5124E5D0BB00967FF9 /* colorsApp.swift in Sources */,
+				D7109EDB24EB189E00C321E8 /* FinalPageCollectionViewController.swift in Sources */,
 				D7003C1824E58D8A00967FF9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +713,7 @@
 		};
 		D7003C3D24E58D8C00967FF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FDF190DA54B05D5BF33F76B /* Pods-timeToRead.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +732,7 @@
 		};
 		D7003C3E24E58D8C00967FF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4972A81AF4D802212EEBB2D3 /* Pods-timeToRead.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +751,7 @@
 		};
 		D7003C4024E58D8C00967FF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 638A22DBBEFEF44BC19D6649 /* Pods-timeToReadTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -574,6 +774,7 @@
 		};
 		D7003C4124E58D8C00967FF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7715DE6F6D39EBDB8FD9D84A /* Pods-timeToReadTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -596,6 +797,7 @@
 		};
 		D7003C4324E58D8C00967FF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAAA393668AF12C3BDA9662E /* Pods-timeToRead-timeToReadUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -616,6 +818,7 @@
 		};
 		D7003C4424E58D8C00967FF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F185C42EBFE63199BE18B67B /* Pods-timeToRead-timeToReadUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

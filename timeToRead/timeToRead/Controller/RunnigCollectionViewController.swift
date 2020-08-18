@@ -24,7 +24,7 @@ class RunnigCollectionViewController: UICollectionViewController {
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         runningCollection.register(UINib(nibName: TimeCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: TimeCollectionViewCell.identifier)
-        runningCollection.register(UINib.init(nibName: StartCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: StartCollectionViewCell.identifier)
+        runningCollection.register(UINib.init(nibName: StopCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: StopCollectionViewCell.identifier)
 //        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
 //        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 30)
 //        layout.minimumInteritemSpacing = 10
@@ -43,11 +43,7 @@ class RunnigCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        if section == 0{
-            return 1
-        }else{
-            return 2
-        }
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -57,8 +53,8 @@ class RunnigCollectionViewController: UICollectionViewController {
                     return cell
 
             }else{
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StartCollectionViewCell.identifier, for: indexPath) as! StartCollectionViewCell
-                cell.startButton.setTitle("Avançar", for: .normal)
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StopCollectionViewCell.identifier, for: indexPath) as! StopCollectionViewCell
+//                cell.startButton.setTitle("Avançar", for: .normal)
                 return cell
             }
 
