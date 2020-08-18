@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-1186" y="1"/>
         </scene>
-        <!--Current Page Collection View Controller-->
+        <!--Current Page-->
         <scene sceneID="cvF-uA-AN9">
             <objects>
                 <collectionViewController id="lcs-5S-T2v" customClass="CurrentPageCollectionViewController" customModule="timeToRead" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                             <outlet property="delegate" destination="lcs-5S-T2v" id="niX-bZ-dsw"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="ljf-Uk-G3u"/>
+                    <navigationItem key="navigationItem" title="Current Page" largeTitleDisplayMode="always" id="ljf-Uk-G3u"/>
                     <connections>
                         <outlet property="currentPageCollection" destination="2wX-UX-gHG" id="ac2-Hv-Vqs"/>
                     </connections>

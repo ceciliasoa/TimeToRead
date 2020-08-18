@@ -11,7 +11,8 @@ import UIKit
 class TimeCollectionViewController: UICollectionViewController, CustomDelegate {
     
     func start() {
-        performSegue(withIdentifier: "CurrentPageSegue", sender: self)
+        navigationController?.pushViewController(CurrentPageCollectionViewController(), animated: true)
+       // performSegue(withIdentifier: "CurrentPageSegue", sender: self)
 
     }
     
@@ -29,6 +30,7 @@ class TimeCollectionViewController: UICollectionViewController, CustomDelegate {
         timeFirstScreen.register(UINib.init(nibName: NumPageCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: NumPageCollectionViewCell.identifier)
         timeFirstScreen.delegate = self
        
+        
         
 
     }
@@ -56,7 +58,7 @@ class TimeCollectionViewController: UICollectionViewController, CustomDelegate {
             return cell
         } else{
            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StartCollectionViewCell.identifier, for: indexPath) as! StartCollectionViewCell
-            
+            cell.delegate = self
 //            cell.startButton.addTarget(self, action: #selector(start(_ :)), for: .touchUpInside)
 
             return cell

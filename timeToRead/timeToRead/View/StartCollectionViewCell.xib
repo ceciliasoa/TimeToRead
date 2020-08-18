@@ -10,14 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StartCollectionViewCell" customModule="timeToRead" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="163" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="182" height="92"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="163" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="182" height="92"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBY-7m-UqV">
-                        <rect key="frame" x="6" y="0.0" width="170" height="44"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBY-7m-UqV">
+                        <rect key="frame" x="0.0" y="44" width="182" height="44"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="DJt-Pr-0BP"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="DaZ-oT-jaE"/>
@@ -33,14 +33,13 @@
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="VBY-7m-UqV" secondAttribute="top" id="Bsa-np-yyR"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="VBY-7m-UqV" secondAttribute="trailing" id="WbP-FL-zO3"/>
                 <constraint firstItem="VBY-7m-UqV" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="Y50-7N-Lf6"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="VBY-7m-UqV" secondAttribute="bottom" id="aJM-cf-ZvL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="163" height="44"/>
+            <size key="customSize" width="182" height="92"/>
             <connections>
                 <outlet property="startButton" destination="VBY-7m-UqV" id="ewX-Ri-rHe"/>
             </connections>
-            <point key="canvasLocation" x="103.62318840579711" y="-5.3571428571428568"/>
+            <point key="canvasLocation" x="117.39130434782609" y="7.3660714285714279"/>
         </collectionViewCell>
     </objects>
 </document>

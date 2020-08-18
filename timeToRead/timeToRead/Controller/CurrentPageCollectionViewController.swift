@@ -20,9 +20,6 @@ class CurrentPageCollectionViewController: UICollectionViewController {
         // Register cell classes
         currentPageCollection.register(UINib.init(nibName: NumPageCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: NumPageCollectionViewCell.identifier)
         currentPageCollection.register(UINib.init(nibName: StartCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: StartCollectionViewCell.identifier)
-        
-
-
 
     }
 
@@ -41,7 +38,7 @@ class CurrentPageCollectionViewController: UICollectionViewController {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumPageCollectionViewCell.identifier, for: indexPath) as! NumPageCollectionViewCell
             return cell
 
-        }else{
+        } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StartCollectionViewCell.identifier, for: indexPath) as! StartCollectionViewCell
             cell.startButton.setTitle("Avançar", for: .normal)
             return cell
