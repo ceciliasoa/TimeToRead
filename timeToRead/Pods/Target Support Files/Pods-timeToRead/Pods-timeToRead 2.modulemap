@@ -1,0 +1,6 @@
+framework module Pods_timeToRead {
+  umbrella header "Pods-timeToRead-umbrella.h"
+
+  export *
+  module * { export * }
+}

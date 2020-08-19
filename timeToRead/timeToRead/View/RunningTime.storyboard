@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bn4-oO-fy1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IEh-7L-AKd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,24 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
-        <scene sceneID="ONO-MS-Vi1">
-            <objects>
-                <navigationController id="bn4-oO-fy1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FRv-WN-ggK"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9wR-Re-h87">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="IEh-7L-AKd" kind="relationship" relationship="rootViewController" id="hSz-oc-TNq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MCA-wn-zsp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1143" y="47"/>
-        </scene>
         <!--Calculadora de Leitura-->
         <scene sceneID="scy-5Q-gsP">
             <objects>
@@ -57,11 +39,22 @@
                     <navigationItem key="navigationItem" title="Calculadora de Leitura" id="3Vq-2F-ge3"/>
                     <connections>
                         <outlet property="runningCollection" destination="5kx-HM-dxp" id="m25-W4-i0S"/>
+                        <segue destination="TDT-dq-Pk5" kind="push" identifier="FinalPageSegue" id="8zf-gX-3bk"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJ3-Pl-5db" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-267" y="38"/>
+        </scene>
+        <!--FinalPage-->
+        <scene sceneID="cik-dM-hw2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FinalPage" id="TDT-dq-Pk5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0g0-WS-cbI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gp7-D6-C2r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="1"/>
         </scene>
     </scenes>
 </document>

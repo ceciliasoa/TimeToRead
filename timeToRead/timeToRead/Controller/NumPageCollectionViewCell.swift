@@ -38,6 +38,8 @@ class NumPageCollectionViewCell: UICollectionViewCell {
         textFieldNumPage.tintColor = .secundaryColor
         textFieldNumPage.textColor = .textColor
         
+//        textFieldNumPage.delegate = self
+        
 
 //        percentegeButton.setTitle("oioi", for: .normal)
         
@@ -67,4 +69,8 @@ class NumPageCollectionViewCell: UICollectionViewCell {
 
 }
 
-
+//extension NumPageCollectionViewCell: UITextFieldDelegate{
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        return 1
+//    }
+//}

@@ -10,7 +10,11 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class RunnigCollectionViewController: UICollectionViewController {
+class RunnigCollectionViewController: UICollectionViewController, StopButtonDelegate {
+    func stop() {
+        performSegue(withIdentifier: "FinalPageSegue", sender: self)
+    }
+    
     @IBOutlet var runningCollection: UICollectionView!
     
     override func viewDidLoad() {
@@ -54,6 +58,7 @@ class RunnigCollectionViewController: UICollectionViewController {
 
             }else{
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StopCollectionViewCell.identifier, for: indexPath) as! StopCollectionViewCell
+            cell.delegate = self
 //                cell.startButton.setTitle("Avançar", for: .normal)
                 return cell
             }

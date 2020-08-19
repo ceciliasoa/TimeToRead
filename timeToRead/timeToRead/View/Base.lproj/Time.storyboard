@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-1251" y="72"/>
         </scene>
-        <!--Calculadora de Leitura-->
+        <!--Calculadora de leitura-->
         <scene sceneID="jk5-Ax-Mar">
             <objects>
-                <collectionViewController id="dtN-BR-QLd" customClass="TimeCollectionViewController" customModule="timeToRead" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="Calculadora de leitura" id="dtN-BR-QLd" customClass="TimeCollectionViewController" customModule="timeToRead" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" id="Mte-Gg-4IZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,7 +61,7 @@
                     <connections>
                         <outlet property="TimeFirstScreen" destination="Mte-Gg-4IZ" id="VbP-zM-fhl"/>
                         <outlet property="timeFirstScreen" destination="Mte-Gg-4IZ" id="sYP-hE-DBg"/>
-                        <segue destination="SpL-nd-hy1" kind="modal" identifier="CurrentPageSegue" id="fQn-bm-9c9"/>
+                        <segue destination="SpL-nd-hy1" kind="push" identifier="CurrentPageSegue" id="fQn-bm-9c9"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulj-9X-RAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -71,7 +71,9 @@
         <!--CurrentPage-->
         <scene sceneID="tRp-X2-eoQ">
             <objects>
-                <viewControllerPlaceholder storyboardName="CurrentPage" id="SpL-nd-hy1" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="CurrentPage" id="SpL-nd-hy1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="elf-tv-jcF"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cs-cU-a21" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="439" y="34"/>

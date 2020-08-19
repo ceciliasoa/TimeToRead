@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -155,7 +155,6 @@
 				638A22DBBEFEF44BC19D6649 /* Pods-timeToReadTests.debug.xcconfig */,
 				7715DE6F6D39EBDB8FD9D84A /* Pods-timeToReadTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -247,6 +246,7 @@
 			children = (
 				D7003C5224E6BA9400967FF9 /* TimeCollectionViewController.swift */,
 				D7003C6024E6D79100967FF9 /* CurrentPageCollectionViewController.swift */,
+				D7A1E35924E98A4000A72F8B /* RunnigCollectionViewController.swift */,
 				D7109EDA24EB189E00C321E8 /* FinalPageCollectionViewController.swift */,
 				D75DAA7124EC1ACB00247CE0 /* ResultTableViewController.swift */,
 				D7003C5624E6C13000967FF9 /* TimeCollectionViewCell.swift */,
@@ -254,7 +254,6 @@
 				D7003C6224E6D85800967FF9 /* NumPageCollectionViewCell.swift */,
 				D7003C1524E58D8A00967FF9 /* AppDelegate.swift */,
 				D7003C1724E58D8A00967FF9 /* SceneDelegate.swift */,
-				D7A1E35924E98A4000A72F8B /* RunnigCollectionViewController.swift */,
 				D7109ECC24EAF3DC00C321E8 /* StopCollectionViewCell.swift */,
 				D7109EDC24EB1A5B00C321E8 /* SearchBookCollectionViewCell.swift */,
 				D75DAA6B24EBF82A00247CE0 /* PagesBookCollectionViewCell.swift */,
