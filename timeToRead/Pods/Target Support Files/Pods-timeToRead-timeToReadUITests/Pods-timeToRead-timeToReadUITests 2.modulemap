@@ -1,0 +1,6 @@
+framework module Pods_timeToRead_timeToReadUITests {
+  umbrella header "Pods-timeToRead-timeToReadUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

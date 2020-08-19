@@ -8,6 +8,9 @@
 
 import UIKit
 
+protocol StopButtonDelegate: UICollectionViewController {
+    func stop()
+}
 class StopCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var viewBg: UIView!
@@ -30,6 +33,7 @@ class StopCollectionViewCell: UICollectionViewCell {
         pauseButton.setTitleColor(.white, for: .normal)
         
     }
+    weak var delegate: StopButtonDelegate?
     @IBAction func PausePressed(_ sender: Any) {
         if pauseButton.isSelected == false{
             pauseButton.setTitle("Continuar", for: .selected)
@@ -40,6 +44,11 @@ class StopCollectionViewCell: UICollectionViewCell {
             
         }
     }
+    
+    @IBAction func StopPressed(_ sender: Any) {
+        delegate?.stop()
+    }
+    
     
 
 }

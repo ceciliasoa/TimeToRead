@@ -9,7 +9,7 @@
 import UIKit
 
 
-protocol CustomDelegate: TimeCollectionViewController {
+protocol StartButtonDelegate: UICollectionViewController {
     func start()
 }
 class StartCollectionViewCell: UICollectionViewCell {
@@ -27,7 +27,7 @@ class StartCollectionViewCell: UICollectionViewCell {
         
         
     }
-    weak var delegate: CustomDelegate?
+    weak var delegate: StartButtonDelegate?
     @IBAction func startBt(_ sender: Any) {
         delegate?.start()
 

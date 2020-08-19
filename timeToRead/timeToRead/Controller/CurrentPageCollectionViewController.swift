@@ -9,9 +9,15 @@
 import UIKit
 
 
-class CurrentPageCollectionViewController: UICollectionViewController {
+class CurrentPageCollectionViewController: UICollectionViewController, StartButtonDelegate {
     @IBOutlet var currentPageCollection: UICollectionView!
     
+    
+    func start() {
+       //navigationController?.pushViewController(CurrentPageCollectionViewController(), animated: true)
+       performSegue(withIdentifier: "RunningTimeSegue", sender: self)
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         currentPageCollection.backgroundColor = .backgroundColor
@@ -34,12 +40,13 @@ class CurrentPageCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row == 0{
+        if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumPageCollectionViewCell.identifier, for: indexPath) as! NumPageCollectionViewCell
             return cell
 
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StartCollectionViewCell.identifier, for: indexPath) as! StartCollectionViewCell
+            cell.delegate = self
             cell.startButton.setTitle("Avançar", for: .normal)
             return cell
         }

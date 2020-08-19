@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="szC-6h-hlu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mkq-sT-dSw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Result Table View Controller-->
         <scene sceneID="V9e-81-Tqb">
             <objects>
                 <tableViewController id="mkq-sT-dSw" customClass="ResultTableViewController" customModule="timeToRead" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,30 +29,25 @@
                             <outlet property="delegate" destination="mkq-sT-dSw" id="i1K-5y-F6M"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="yy5-ml-HA9"/>
+                    <navigationItem key="navigationItem" id="yy5-ml-HA9"/>
                     <connections>
                         <outlet property="resultTable" destination="FOT-WO-gcK" id="KEk-59-D9N"/>
+                        <segue destination="UYi-hP-a9s" kind="show" identifier="TimeSegue" id="2Fc-ZB-fPs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXB-Eb-pLG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-10" y="50"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="PqT-jF-Lrf">
+        <!--Time-->
+        <scene sceneID="wpL-i7-aBc">
             <objects>
-                <navigationController id="szC-6h-hlu" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jcD-uR-pMY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="mkq-sT-dSw" kind="relationship" relationship="rootViewController" id="9If-Fj-hER"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0ST-fm-Tqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Time" id="UYi-hP-a9s" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yMM-7H-vWm"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UoZ-Bp-Nno" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-929" y="50"/>
+            <point key="canvasLocation" x="626" y="74"/>
         </scene>
     </scenes>
 </document>

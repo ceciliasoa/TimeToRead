@@ -10,13 +10,18 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class FinalPageCollectionViewController: UICollectionViewController {
+class FinalPageCollectionViewController: UICollectionViewController, StartButtonDelegate {
+    func start() {
+        performSegue(withIdentifier: "ResultSegue", sender: self)
+    }
+    
 
     @IBOutlet var finalPageCollection: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         finalPageCollection.backgroundColor = .backgroundColor
-        collectionView.contentInset.top = 30
+        collectionView.contentInset.top = 100
+        
 
 
         // Register cell classes
@@ -50,6 +55,7 @@ class FinalPageCollectionViewController: UICollectionViewController {
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumPageCollectionViewCell.identifier, for: indexPath) as! NumPageCollectionViewCell
+            
             cell.labelTitle.font = .systemFont(ofSize: 20, weight: .medium)
             return cell
         case 2:
@@ -58,6 +64,7 @@ class FinalPageCollectionViewController: UICollectionViewController {
             return cell
         case 3:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StartCollectionViewCell.identifier, for: indexPath) as! StartCollectionViewCell
+            cell.delegate = self
             cell.startButton.setTitle("Resultado", for: .normal)
             return cell
         default:
@@ -68,3 +75,6 @@ class FinalPageCollectionViewController: UICollectionViewController {
 
 
 }
+
+    
+
