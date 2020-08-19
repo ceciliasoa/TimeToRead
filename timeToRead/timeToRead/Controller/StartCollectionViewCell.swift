@@ -15,7 +15,7 @@ protocol StartButtonDelegate: UICollectionViewController {
 class StartCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var startButton: UIButton!
-    
+    var theValue = 0.1
     static var xibName = "StartCollectionViewCell"
     static var identifier = "startCell"
     override func awakeFromNib() {
@@ -25,12 +25,11 @@ class StartCollectionViewCell: UICollectionViewCell {
         startButton.layer.cornerRadius = 8
         startButton.titleLabel?.font = .systemFont(ofSize: 24, weight: .medium)
         
-        
+       
     }
     weak var delegate: StartButtonDelegate?
     @IBAction func startBt(_ sender: Any) {
         delegate?.start()
-
     }
     
     

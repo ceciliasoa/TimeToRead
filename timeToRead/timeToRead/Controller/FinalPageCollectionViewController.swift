@@ -10,7 +10,12 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class FinalPageCollectionViewController: UICollectionViewController, StartButtonDelegate {
+class FinalPageCollectionViewController: UICollectionViewController, StartButtonDelegate, textFieldData {
+    func dataCell(text: String) {
+        FinalPageModel.init(finalPage: text, initialPage: nil, totalPage: nil)
+        }
+    
+    
     func start() {
         performSegue(withIdentifier: "ResultSegue", sender: self)
     }
@@ -55,6 +60,7 @@ class FinalPageCollectionViewController: UICollectionViewController, StartButton
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumPageCollectionViewCell.identifier, for: indexPath) as! NumPageCollectionViewCell
+            cell.delegate = self
             
             cell.labelTitle.font = .systemFont(ofSize: 20, weight: .medium)
             return cell

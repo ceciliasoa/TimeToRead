@@ -19,8 +19,12 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a70-Ao-1Ot">
                         <rect key="frame" x="0.0" y="44" width="325" height="187"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuy-I1-3p7">
-                                <rect key="frame" x="63" y="53" width="200" height="82"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuy-I1-3p7">
+                                <rect key="frame" x="50" y="50" width="225" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="8Qx-wM-OBc"/>
+                                    <constraint firstAttribute="height" constant="87" id="TbZ-Rm-Pgu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -28,11 +32,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="yuy-I1-3p7" secondAttribute="bottom" constant="52" id="2j8-Aw-8CM"/>
+                            <constraint firstAttribute="bottom" secondItem="yuy-I1-3p7" secondAttribute="bottom" constant="50" id="2j8-Aw-8CM"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="176" id="Juo-3v-G3y"/>
-                            <constraint firstItem="yuy-I1-3p7" firstAttribute="leading" secondItem="a70-Ao-1Ot" secondAttribute="leading" constant="63" id="a6V-in-qvw"/>
-                            <constraint firstItem="yuy-I1-3p7" firstAttribute="top" secondItem="a70-Ao-1Ot" secondAttribute="top" constant="53" id="dVO-md-nZh"/>
-                            <constraint firstAttribute="trailing" secondItem="yuy-I1-3p7" secondAttribute="trailing" constant="62" id="eko-rM-0jD"/>
+                            <constraint firstItem="yuy-I1-3p7" firstAttribute="leading" secondItem="a70-Ao-1Ot" secondAttribute="leading" constant="50" id="a6V-in-qvw"/>
+                            <constraint firstItem="yuy-I1-3p7" firstAttribute="top" secondItem="a70-Ao-1Ot" secondAttribute="top" constant="50" id="dVO-md-nZh"/>
+                            <constraint firstAttribute="trailing" secondItem="yuy-I1-3p7" secondAttribute="trailing" constant="50" id="eko-rM-0jD"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="t07-3J-xuS"/>
                         </constraints>
                     </view>

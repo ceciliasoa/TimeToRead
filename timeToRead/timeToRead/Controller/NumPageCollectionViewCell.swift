@@ -8,6 +8,9 @@
 
 import UIKit
 
+protocol textFieldData: UICollectionViewController {
+    func dataCell(text: String)
+}
 class NumPageCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var viewBg: UIView!
@@ -21,15 +24,21 @@ class NumPageCollectionViewCell: UICollectionViewCell {
     
     static var xibName = "NumPageCollectionViewCell"
     static var identifier = "NumPageCell"
+    
+    var textList: [String] = []
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
+//      config cells
         viewBg.backgroundColor = .backgroundColor
         labelTitle.font = .systemFont(ofSize: 24, weight: .semibold)
         labelTitle.textColor = .textColor
         pageButton.titleLabel?.tintColor = .textColor
-        pageButton.tintColor = .auxiliarColor
+        pageButton.tintColor = .secundaryColor
         pageButton.setTitleColor(.textColor, for: .normal)
         pageButton.setTitleColor(.textColor, for: .selected)
+        pageButton.isSelected = true
         percentegeButton.tintColor = .auxiliarColor
         percentegeButton.setTitleColor(.textColor, for: .normal)
         percentegeButton.setTitleColor(.textColor, for: .selected)
@@ -38,15 +47,22 @@ class NumPageCollectionViewCell: UICollectionViewCell {
         textFieldNumPage.tintColor = .secundaryColor
         textFieldNumPage.textColor = .textColor
         
-//        textFieldNumPage.delegate = self
-        
+        textFieldNumPage.delegate = self
+         
 
 //        percentegeButton.setTitle("oioi", for: .normal)
         
     }
-
     
+    weak var delegate: textFieldData?
     
+// MARK: Actions
+    @IBAction func textFieldEditing(_ sender: Any) {
+       guard let text = textFieldNumPage.text else {
+           fatalError("WRONG")
+       }
+        delegate?.dataCell(text: text)
+    }
     
     @IBAction func percentBtt(_ sender: Any) {
         
@@ -69,8 +85,10 @@ class NumPageCollectionViewCell: UICollectionViewCell {
 
 }
 
-//extension NumPageCollectionViewCell: UITextFieldDelegate{
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        return 1
-//    }
-//}
+
+extension NumPageCollectionViewCell: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
