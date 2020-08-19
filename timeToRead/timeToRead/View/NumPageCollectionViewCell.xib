@@ -64,7 +64,10 @@
                                     <constraint firstAttribute="height" constant="34" id="VJF-4j-gnA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldEditing:" destination="gTV-IL-0wX" eventType="editingDidEnd" id="ZTh-kE-3lq"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

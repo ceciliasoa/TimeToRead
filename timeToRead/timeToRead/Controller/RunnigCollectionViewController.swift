@@ -16,15 +16,15 @@ class RunnigCollectionViewController: UICollectionViewController, StopButtonDele
     }
     
     @IBOutlet var runningCollection: UICollectionView!
-    
+    var theValue = 00.0
     override func viewDidLoad() {
         super.viewDidLoad()
         runningCollection.backgroundColor = .backgroundColor
-        collectionView.contentInset.top = 200
+        collectionView.contentInset.top = 170
         
          self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.textColor, .font: UIFont.systemFont(ofSize: 35, weight: .bold)]
 
-
+        
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         runningCollection.register(UINib(nibName: TimeCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: TimeCollectionViewCell.identifier)
@@ -40,28 +40,19 @@ class RunnigCollectionViewController: UICollectionViewController, StopButtonDele
 
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if indexPath.section == 0 {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TimeCollectionViewCell.identifier, for: indexPath) as! TimeCollectionViewCell
-                    return cell
-
-            }else{
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StopCollectionViewCell.identifier, for: indexPath) as! StopCollectionViewCell
-            cell.delegate = self
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StopCollectionViewCell.identifier, for: indexPath) as! StopCollectionViewCell
+        cell.delegate = self
 //                cell.startButton.setTitle("Avançar", for: .normal)
-                return cell
-            }
+        return cell
 
         }
     }
