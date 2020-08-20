@@ -14,7 +14,7 @@ class ResultTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         resultTable.backgroundColor = .backgroundColor
-        resultTable.contentInset.top = 100
+        resultTable.contentInset.top = 10
         
         resultTable.register(UINib.init(nibName: ChartCellTableViewCell.xibName, bundle: nil), forCellReuseIdentifier: ChartCellTableViewCell.identifier)
         resultTable.register(UINib.init(nibName: ResultButtomTableViewCell.xibName, bundle: nil), forCellReuseIdentifier: ResultButtomTableViewCell.identifier)

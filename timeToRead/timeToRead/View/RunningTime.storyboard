@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" title="Calculadora de Leitura" id="3Vq-2F-ge3"/>
                     <connections>
                         <outlet property="runningCollection" destination="5kx-HM-dxp" id="m25-W4-i0S"/>
-                        <segue destination="TDT-dq-Pk5" kind="push" identifier="FinalPageSegue" id="8zf-gX-3bk"/>
+                        <segue destination="TDT-dq-Pk5" kind="modal" identifier="FinalPageSegue" id="8zf-gX-3bk"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJ3-Pl-5db" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

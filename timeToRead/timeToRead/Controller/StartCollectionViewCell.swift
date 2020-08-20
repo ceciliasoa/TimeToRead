@@ -9,17 +9,19 @@
 import UIKit
 
 
-protocol StartButtonDelegate: UICollectionViewController {
+protocol StartButtonDelegate: UIViewController {
     func start()
 }
 class StartCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var viewBG: UIView!
+    
     @IBOutlet weak var startButton: UIButton!
     var theValue = 0.1
     static var xibName = "StartCollectionViewCell"
     static var identifier = "startCell"
     override func awakeFromNib() {
         super.awakeFromNib()
+        viewBG.backgroundColor = .backgroundColor
         startButton.tintColor = .white
         startButton.backgroundColor = .primaryColor
         startButton.layer.cornerRadius = 8

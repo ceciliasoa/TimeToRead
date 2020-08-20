@@ -61,7 +61,7 @@
                     <connections>
                         <outlet property="TimeFirstScreen" destination="Mte-Gg-4IZ" id="VbP-zM-fhl"/>
                         <outlet property="timeFirstScreen" destination="Mte-Gg-4IZ" id="sYP-hE-DBg"/>
-                        <segue destination="SpL-nd-hy1" kind="push" identifier="CurrentPageSegue" id="fQn-bm-9c9"/>
+                        <segue destination="SpL-nd-hy1" kind="presentation" identifier="CurrentPageSegue" id="fQn-bm-9c9"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulj-9X-RAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

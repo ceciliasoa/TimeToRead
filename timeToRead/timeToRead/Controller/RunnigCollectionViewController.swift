@@ -13,6 +13,7 @@ private let reuseIdentifier = "Cell"
 class RunnigCollectionViewController: UICollectionViewController, StopButtonDelegate {
     func stop() {
         performSegue(withIdentifier: "FinalPageSegue", sender: self)
+
     }
     
     @IBOutlet var runningCollection: UICollectionView!

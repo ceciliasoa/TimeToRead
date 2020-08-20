@@ -28,10 +28,18 @@ class CurrentPageCollectionViewController: UICollectionViewController, StartButt
         currentPageCollection.backgroundColor = .backgroundColor
         collectionView.contentInset.top = 200
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.textColor, .font: UIFont.systemFont(ofSize: 35, weight: .bold)]
+        
+
+    }
+    override func loadView() {
+        super.loadView()
+        registerCell()
+    }
+    
+    func registerCell (){
         // Register cell classes
         currentPageCollection.register(UINib.init(nibName: NumPageCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: NumPageCollectionViewCell.identifier)
         currentPageCollection.register(UINib.init(nibName: StartCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: StartCollectionViewCell.identifier)
-
     }
     
     // Finish keyboard

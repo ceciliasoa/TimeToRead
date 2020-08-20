@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol textFieldData: UICollectionViewController {
+protocol textFieldData: UIViewController {
     func dataCell(text: String)
 }
 class NumPageCollectionViewCell: UICollectionViewCell {
