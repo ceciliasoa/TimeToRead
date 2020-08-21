@@ -27,16 +27,16 @@ class ChartCellTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         viewBg.backgroundColor = .backgroundColor
-        readPageLabel.text = "Você leu 15 páginas!"
+        readPageLabel.text = "\(Reading.shared.readedPage())"
         readPageLabel.font = .systemFont(ofSize: 17, weight: .regular)
         readPageLabel.textColor = .textColor
         totalPages.textColor = .textColor
         totalPages.font = .systemFont(ofSize: 17, weight: .regular)
-        totalPages.text = "50/500 páginas lidas"
+        totalPages.text = "páginas lidas"
         // Initialization code
         
-        totalPagesBook.value = 100
-        readPegeBook.value = 30
+        totalPagesBook.value = 100 - Reading.shared.totalRead()
+        readPegeBook.value = Reading.shared.totalRead()
         
         chartView.rotationEnabled = false
         chartView.entryLabelColor = .black

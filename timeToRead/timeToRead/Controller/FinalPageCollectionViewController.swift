@@ -10,27 +10,17 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class FinalPageCollectionViewController: UICollectionViewController, StartButtonDelegate, textFieldData {
-    func dataCell(text: String) {
-        FinalPageModel.init(finalPage: text, initialPage: nil, totalPage: nil)
-        }
-    
-    
-    func start() {
-        performSegue(withIdentifier: "ResultSegue", sender: self)
-    }
+class FinalPageCollectionViewController: UICollectionViewController, StartButtonDelegate, textFieldData, UISearchBarDelegate {
+    @IBOutlet var finalPageCollection: UICollectionView!
     
     var searchBar = UISearchBar()
-    
     let searchController = UISearchController(searchResultsController: nil)
-
-    @IBOutlet var finalPageCollection: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         finalPageCollection.backgroundColor = .backgroundColor
         collectionView.contentInset.top = 100
 
-
+// Search
         //navigationController?.navigationItem.leftItemsSupplementBackButton = true
 //        navigationItem.rightBarButtonItem?.customView?.addSubview(view)
         navigationItem.searchController?.isActive = true
@@ -38,12 +28,14 @@ class FinalPageCollectionViewController: UICollectionViewController, StartButton
         navigationItem.searchController = searchController
         searchController.searchBar.placeholder = "Qual livro você está lendo?"
         navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.delegate = self
         //searchController.searchResultsUpdater =
         
-
-        // Do any additional setup after loading the view.
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+    }
     override func loadView() {
         super.loadView()
         registerCell()
@@ -57,16 +49,25 @@ class FinalPageCollectionViewController: UICollectionViewController, StartButton
         finalPageCollection.register(UINib.init(nibName: PagesBookCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: PagesBookCollectionViewCell.identifier)
         finalPageCollection.register(UINib.init(nibName: StartCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: StartCollectionViewCell.identifier)
     }
+    
+    func dataCell(text: String) {
+        let pageInt = Int(text)
+        Reading.shared.finalPage = pageInt
+        Reading.shared.totalPage = 458
+    }
+    
+    
+    func start() {
+        performSegue(withIdentifier: "ResultSegue", sender: self)
+    }
 
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 3
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return 1
     }
 

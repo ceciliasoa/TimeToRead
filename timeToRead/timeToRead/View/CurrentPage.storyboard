@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" title="Current Page" largeTitleDisplayMode="always" id="ljf-Uk-G3u"/>
                     <connections>
                         <outlet property="currentPageCollection" destination="2wX-UX-gHG" id="ac2-Hv-Vqs"/>
-                        <segue destination="cYj-9h-t0p" kind="push" identifier="RunningTimeSegue" id="Iho-HC-nTA"/>
+                        <segue destination="cYj-9h-t0p" kind="presentation" identifier="RunningTimeSegue" id="Iho-HC-nTA"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eh9-dg-MV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

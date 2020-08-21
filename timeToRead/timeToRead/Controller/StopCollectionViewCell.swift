@@ -100,6 +100,8 @@ class StopCollectionViewCell: UICollectionViewCell {
             pauseButton.setTitle("Continuar", for: .selected)
             pauseButton.tintColor = .primaryColor
             pauseButton.isSelected = true
+            Duration.shared.timerDuration = duration
+
         }
         
     }
