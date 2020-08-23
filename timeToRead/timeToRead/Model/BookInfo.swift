@@ -13,6 +13,9 @@ class Reading {
     var initialPage: Int?
     var finalPage: Int?
     var totalPage: Int?
+    var bookTitle: String?
+    var bookAuthor: String?
+    
     
     
     static var shared = Reading()

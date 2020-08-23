@@ -12,5 +12,5 @@ enum ApiError: Error {
     case invalidUrl
     case couldNotDecode
     case failedRequest
-    case unknowEroor (statuscode: Int)
+    case unknowError (statuscode: Int)
 }

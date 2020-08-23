@@ -28,5 +28,8 @@ struct Book: Decodable {
 }
 
 struct VolumeInfo: Decodable {
+    var title: String?
+    var authors: [String?]
     var pageCount: Int?
+    
 }
