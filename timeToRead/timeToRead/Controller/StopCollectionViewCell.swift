@@ -33,13 +33,13 @@ class StopCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         viewBg.backgroundColor = .backgroundColor
-        stopButton.backgroundColor = .primaryColor
+        stopButton.backgroundColor = .textColor
         stopButton.layer.cornerRadius = 8
         stopButton.setTitleColor(.white, for: .normal)
         stopButton.titleLabel?.font = .systemFont(ofSize: 24, weight: .medium)
         pauseButton.titleLabel?.font = .systemFont(ofSize: 24, weight: .medium)
         pauseButton.layer.cornerRadius = 8
-        pauseButton.backgroundColor = .primaryColor
+        pauseButton.backgroundColor = .textColor
         pauseButton.setTitleColor(.white, for: .normal)
         timerLabel.font = UIFont.monospacedSystemFont(ofSize: 60, weight: .medium)
         timerLabel.textColor = .secundaryColor
@@ -100,6 +100,8 @@ class StopCollectionViewCell: UICollectionViewCell {
             pauseButton.setTitle("Continuar", for: .selected)
             pauseButton.tintColor = .primaryColor
             pauseButton.isSelected = true
+            Duration.shared.timerDuration = duration
+
         }
         
     }

@@ -9,11 +9,8 @@
 import UIKit
 
 
-class CurrentPageCollectionViewController: UICollectionViewController, StartButtonDelegate, textFieldData {
-    func dataCell(text: String) {
-        FinalPageModel.init(finalPage: nil , initialPage: text, totalPage: nil)
-    }
-    
+class CurrentPageCollectionViewController: UICollectionViewController, StartButtonDelegate, textFieldData{
+
     @IBOutlet var currentPageCollection: UICollectionView!
     
     
@@ -24,34 +21,26 @@ class CurrentPageCollectionViewController: UICollectionViewController, StartButt
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configTapGesture()
         currentPageCollection.backgroundColor = .backgroundColor
         collectionView.contentInset.top = 200
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.textColor, .font: UIFont.systemFont(ofSize: 35, weight: .bold)]
         
-
     }
     override func loadView() {
         super.loadView()
         registerCell()
     }
-    
     func registerCell (){
         // Register cell classes
         currentPageCollection.register(UINib.init(nibName: NumPageCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: NumPageCollectionViewCell.identifier)
         currentPageCollection.register(UINib.init(nibName: StartCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: StartCollectionViewCell.identifier)
     }
     
-    // Finish keyboard
-//    func configTapGesture(){
-//        let tapGesture = UIGestureRecognizer(target: self, action: #selector(CurrentPageCollectionViewController.handleTap))
-//        view.addGestureRecognizer(tapGesture)
-//    }
-//    @objc func handleTap(){
-//
-//        view.endEditing(true)
-//    }
-    
+    func dataCell(text: String) {
+        let pageInt = Int(text)
+        Reading.shared.initialPage = pageInt
+    }
+
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -64,7 +53,7 @@ class CurrentPageCollectionViewController: UICollectionViewController, StartButt
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumPageCollectionViewCell.identifier, for: indexPath) as! NumPageCollectionViewCell
-            
+            cell.delegate = self
             return cell
 
         } else {

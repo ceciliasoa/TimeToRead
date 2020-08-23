@@ -23,7 +23,7 @@ class StartCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         viewBG.backgroundColor = .backgroundColor
         startButton.tintColor = .white
-        startButton.backgroundColor = .primaryColor
+        startButton.backgroundColor = .textColor
         startButton.layer.cornerRadius = 8
         startButton.titleLabel?.font = .systemFont(ofSize: 24, weight: .medium)
         

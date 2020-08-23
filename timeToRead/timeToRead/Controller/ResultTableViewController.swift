@@ -72,7 +72,7 @@ class ResultTableViewController: UITableViewController {
             
             switch indexPath.row {
             case 0:
-                cell.textLabel?.text = "Tempo de leitura"
+                cell.textLabel?.text = "Tempo de leitura \(Duration.shared.getDuration())"
             case 1:
                 cell.textLabel?.text = "lendo 30 páginas por dia você terminará em 10 dias "
             case 2:
