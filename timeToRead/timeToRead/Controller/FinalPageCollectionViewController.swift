@@ -27,6 +27,7 @@ class FinalPageCollectionViewController: UICollectionViewController, StartButton
         // Search
         //navigationController?.navigationItem.leftItemsSupplementBackButton = true
         //        navigationItem.rightBarButtonItem?.customView?.addSubview(view)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.textColor]
         navigationItem.searchController?.isActive = true
         //navigationItem.titleView = searchBar
         navigationItem.searchController = searchController
@@ -59,6 +60,17 @@ class FinalPageCollectionViewController: UICollectionViewController, StartButton
         finalPageCollection.register(UINib.init(nibName: ShowBookCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: ShowBookCollectionViewCell.identifier)
     }
     
+    func dataCell(text: String) {
+        let pageInt = Int(text)
+        Reading.shared.finalPage = pageInt
+        //        Reading.shared.totalPage = 458
+    }
+    
+    
+    func start() {
+        performSegue(withIdentifier: "ResultSegue", sender: self)
+    }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searched = searchController.searchBar.text else{fatalError("error")}
         let searchReplace = searched.replacingOccurrences(of: " ", with: "+")
@@ -85,22 +97,7 @@ class FinalPageCollectionViewController: UICollectionViewController, StartButton
         collectionView.reloadData()
 
     }
-    //    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    //
-    //
-    //        print(searchText)
-    //    }
-    
-    func dataCell(text: String) {
-        let pageInt = Int(text)
-        Reading.shared.finalPage = pageInt
-        //        Reading.shared.totalPage = 458
-    }
-    
-    
-    func start() {
-        performSegue(withIdentifier: "ResultSegue", sender: self)
-    }
+
     
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

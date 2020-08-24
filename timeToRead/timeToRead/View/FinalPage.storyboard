@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Total-->
+        <!--Dados da Leitura-->
         <scene sceneID="NXc-62-EUj">
             <objects>
                 <collectionViewController id="oFj-dl-X9c" customClass="FinalPageCollectionViewController" customModule="timeToRead" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,10 +26,10 @@
                             <outlet property="delegate" destination="oFj-dl-X9c" id="U66-q2-phl"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Total" largeTitleDisplayMode="always" id="Mqh-g3-iW0"/>
+                    <navigationItem key="navigationItem" title="Dados da Leitura" largeTitleDisplayMode="always" id="Mqh-g3-iW0"/>
                     <connections>
                         <outlet property="finalPageCollection" destination="qbX-3z-Ztx" id="p9w-jW-pSj"/>
-                        <segue destination="XHQ-kb-gTh" kind="push" identifier="ResultSegue" id="4gt-a5-0to"/>
+                        <segue destination="XHQ-kb-gTh" kind="presentation" identifier="ResultSegue" modalPresentationStyle="automatic" id="4gt-a5-0to"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tl4-He-tjb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

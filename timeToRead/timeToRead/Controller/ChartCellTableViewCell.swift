@@ -18,7 +18,7 @@ class ChartCellTableViewCell: UITableViewCell {
     @IBOutlet weak var chartView: PieChartView!
     
     var totalPagesBook = PieChartDataEntry(value: 0)
-    var readPegeBook = PieChartDataEntry(value: 0)
+    var readPageBook = PieChartDataEntry(value: 0)
     
     var chartBook = [PieChartDataEntry]()
     static var xibName = "ChartCellTableViewCell"
@@ -27,26 +27,31 @@ class ChartCellTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         viewBg.backgroundColor = .backgroundColor
-        readPageLabel.text = "\(Reading.shared.readedPage())"
+        readPageLabel.text = "Você leu \(Reading.shared.readedPage()) páginas"
         readPageLabel.font = .systemFont(ofSize: 17, weight: .regular)
         readPageLabel.textColor = .textColor
         totalPages.textColor = .textColor
         totalPages.font = .systemFont(ofSize: 17, weight: .regular)
-        totalPages.text = "páginas lidas"
+        totalPages.text = "\(Reading.shared.convertFinalPage())/\(Reading.shared.convertTotalPage()) páginas"
         // Initialization code
         
         totalPagesBook.value = 100 - Reading.shared.totalRead()
-        readPegeBook.value = Reading.shared.totalRead()
+        readPageBook.value = Reading.shared.totalRead()
+        
         
         chartView.rotationEnabled = false
         chartView.entryLabelColor = .black
         
-        chartBook = [readPegeBook, totalPagesBook]
+        chartBook = [readPageBook, totalPagesBook]
         updateChart()
     }
     
     func updateChart() {
         let chartset = PieChartDataSet.init(entries: chartBook, label: nil)
+
+        
+        chartset.valueColors = [UIColor.white, UIColor.primaryColor]
+        
         
         let chartData = PieChartData(dataSet: chartset)
         

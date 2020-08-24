@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Current Page-->
+        <!--Dados da Leitura-->
         <scene sceneID="cvF-uA-AN9">
             <objects>
                 <collectionViewController id="lcs-5S-T2v" customClass="CurrentPageCollectionViewController" customModule="timeToRead" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,7 +36,9 @@
                             <outlet property="delegate" destination="lcs-5S-T2v" id="niX-bZ-dsw"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Current Page" largeTitleDisplayMode="always" id="ljf-Uk-G3u"/>
+                    <navigationItem key="navigationItem" title="Dados da Leitura" largeTitleDisplayMode="never" id="ljf-Uk-G3u">
+                        <barButtonItem key="backBarButtonItem" title="Dados" id="QED-gw-mdc"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="currentPageCollection" destination="2wX-UX-gHG" id="ac2-Hv-Vqs"/>
                         <segue destination="cYj-9h-t0p" kind="presentation" identifier="RunningTimeSegue" id="Iho-HC-nTA"/>

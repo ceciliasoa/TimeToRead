@@ -80,10 +80,12 @@ class StopCollectionViewCell: UICollectionViewCell {
     @IBAction func PausePressed(_ sender: Any) {
         if pauseButton.isSelected == false{
             pauseButton.setTitle("Continuar", for: .selected)
-            pauseButton.tintColor = .primaryColor
+            pauseButton.tintColor = .textColor
             pauseButton.isSelected = true
             isTimerOn = false
             toggleTimer(on: isTimerOn)
+            Reading.shared.timerDuration = duration
+//            Duration.shared.timerDuration = duration
             
         }else{
             pauseButton.isSelected = false
@@ -98,12 +100,12 @@ class StopCollectionViewCell: UICollectionViewCell {
         timer.invalidate()
         if pauseButton.isSelected == false{
             pauseButton.setTitle("Continuar", for: .selected)
-            pauseButton.tintColor = .primaryColor
+            pauseButton.tintColor = .textColor
             pauseButton.isSelected = true
-            Duration.shared.timerDuration = duration
+            Reading.shared.timerDuration = duration
+//            Duration.shared.timerDuration = duration
 
         }
-        
     }
     
     

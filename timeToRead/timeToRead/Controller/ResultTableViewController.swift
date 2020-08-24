@@ -8,14 +8,20 @@
 
 import UIKit
 
-class ResultTableViewController: UITableViewController {
+class ResultTableViewController: UITableViewController, ResultButtonDelegate {
+    func unwind() {
+        print("retorno")
+//        performSegue(withIdentifier: "unwindSegueToVC1", sender: self)
+    }
+    
 
     @IBOutlet var resultTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         resultTable.backgroundColor = .backgroundColor
         resultTable.contentInset.top = 10
-        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.textColor]
+
         resultTable.register(UINib.init(nibName: ChartCellTableViewCell.xibName, bundle: nil), forCellReuseIdentifier: ChartCellTableViewCell.identifier)
         resultTable.register(UINib.init(nibName: ResultButtomTableViewCell.xibName, bundle: nil), forCellReuseIdentifier: ResultButtomTableViewCell.identifier)
 
@@ -68,15 +74,15 @@ class ResultTableViewController: UITableViewController {
             cell.textLabel?.numberOfLines = .max
             cell.backgroundColor = .backgroundColor
             cell.textLabel?.font = .systemFont(ofSize: 17, weight: .medium)
-            cell.textLabel?.textColor = .textColor
+            cell.textLabel?.textColor = .secundaryColor
             
             switch indexPath.row {
             case 0:
-                cell.textLabel?.text = "Tempo de leitura \(Duration.shared.getDuration())"
+                cell.textLabel?.text = "Tempo de leitura \(Reading.shared.convertDuration())"
             case 1:
-                cell.textLabel?.text = "lendo 30 páginas por dia você terminará em 10 dias "
+                cell.textLabel?.text = "lendo 30 páginas por dia você terminará em \(Reading.shared.read30Page()) dias "
             case 2:
-                cell.textLabel?.text = "Duração do livro"
+                cell.textLabel?.text = "Duração do livro \(Reading.shared.durationBook())"
             case 3:
                 let cellButton = tableView.dequeueReusableCell(withIdentifier: ResultButtomTableViewCell.identifier, for: indexPath) as! ResultButtomTableViewCell
                 return cellButton
