@@ -26,13 +26,13 @@ class ShowBookCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         viewBG.layer.cornerRadius = 8
-        livroLabel.font = .systemFont(ofSize: 24, weight: .semibold)
+        livroLabel.font = .systemFont(ofSize: 20, weight: .medium)
         livroLabel.textColor = .textColor
         titleLabel.font = .systemFont(ofSize: 20, weight: .medium)
         titleLabel.textColor = .secundaryColor
-        authorLabel.font = .systemFont(ofSize: 20, weight: .medium)
+        authorLabel.font = .systemFont(ofSize: 17, weight: .regular)
         authorLabel.textColor = .secundaryColor
-        pageLabel.font = .systemFont(ofSize: 20, weight: .medium)
+        pageLabel.font = .systemFont(ofSize: 17, weight: .regular)
         pageLabel.textColor = .secundaryColor
         
         

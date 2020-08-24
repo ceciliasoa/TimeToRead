@@ -8,6 +8,9 @@
 
 import UIKit
 
+protocol ResultButtonDelegate: UIViewController {
+    func unwind()
+}
 class ResultButtomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var view: UIView!
@@ -18,13 +21,18 @@ class ResultButtomTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         view.backgroundColor = .backgroundColor
-        resultButton.backgroundColor = .primaryColor
+        resultButton.backgroundColor = .textColor
         resultButton.layer.cornerRadius = 8
         resultButton.setTitle("Finalizar", for: .normal)
         resultButton.setTitleColor(.white, for: .normal)
         resultButton.titleLabel?.font = .systemFont(ofSize: 24, weight: .medium)
-        
-    }
 
+    }
+    
+    weak var delegate: ResultButtonDelegate?
+
+    @IBAction func ResultUnwind(_ sender: Any) {
+        delegate?.unwind()
+    }
     
 }

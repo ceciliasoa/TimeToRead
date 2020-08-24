@@ -23,13 +23,10 @@ class RunnigCollectionViewController: UICollectionViewController, StopButtonDele
         runningCollection.backgroundColor = .backgroundColor
         collectionView.contentInset.top = 170
         
-         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.textColor, .font: UIFont.systemFont(ofSize: 35, weight: .bold)]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.textColor]
 
         
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        runningCollection.register(UINib(nibName: TimeCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: TimeCollectionViewCell.identifier)
-        runningCollection.register(UINib.init(nibName: StopCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: StopCollectionViewCell.identifier)
+        
 //        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
 //        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 30)
 //        layout.minimumInteritemSpacing = 10
@@ -37,7 +34,16 @@ class RunnigCollectionViewController: UICollectionViewController, StopButtonDele
 //        collectionView!.collectionViewLayout = layout
 
     }
-
+    override func loadView() {
+           super.loadView()
+           registerCell()
+       }
+       func registerCell (){
+           // Register cell classes
+           self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+           runningCollection.register(UINib(nibName: TimeCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: TimeCollectionViewCell.identifier)
+           runningCollection.register(UINib.init(nibName: StopCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: StopCollectionViewCell.identifier)
+       }
 
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

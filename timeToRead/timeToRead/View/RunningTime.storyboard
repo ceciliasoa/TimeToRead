@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IEh-7L-AKd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VoK-yd-oK1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -36,15 +36,18 @@
                             <outlet property="delegate" destination="IEh-7L-AKd" id="I9d-iV-aX1"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Calculadora de Leitura" id="3Vq-2F-ge3"/>
+                    <navigationItem key="navigationItem" title="Calculadora de Leitura" id="3Vq-2F-ge3">
+                        <barButtonItem key="backBarButtonItem" title="Timer" id="hJJ-r6-GMo"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="runningCollection" destination="5kx-HM-dxp" id="m25-W4-i0S"/>
-                        <segue destination="TDT-dq-Pk5" kind="modal" identifier="FinalPageSegue" id="8zf-gX-3bk"/>
+                        <segue destination="TDT-dq-Pk5" kind="presentation" identifier="FinalPageSegue" id="8zf-gX-3bk"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJ3-Pl-5db" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Title" id="XF4-ig-pDf" userLabel="Calculadora de Leitura"/>
             </objects>
-            <point key="canvasLocation" x="-267" y="38"/>
+            <point key="canvasLocation" x="642.02898550724638" y="37.5"/>
         </scene>
         <!--FinalPage-->
         <scene sceneID="cik-dM-hw2">
@@ -54,7 +57,25 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gp7-D6-C2r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="1"/>
+            <point key="canvasLocation" x="1281.8840579710145" y="0.6696428571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ug4-kt-2Jj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VoK-yd-oK1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xnt-pO-kog">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IEh-7L-AKd" kind="relationship" relationship="rootViewController" id="eAc-3B-I6W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ydl-2l-BLj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-268.1159420289855" y="37.5"/>
         </scene>
     </scenes>
 </document>
