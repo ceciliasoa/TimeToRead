@@ -10,6 +10,7 @@ import UIKit
 
 class TimeCollectionViewCell: UICollectionViewCell {
 
+   
     @IBOutlet weak var viewTimer: UIView!
     @IBOutlet weak var labelTimer: UILabel!
     static var xibName = "TimeCollectionViewCell"
@@ -22,6 +23,8 @@ class TimeCollectionViewCell: UICollectionViewCell {
         labelTimer.textColor = .secundaryColor
         labelTimer.text = "00:00"
         // Initialization code
+        
+        
     }
 
 }

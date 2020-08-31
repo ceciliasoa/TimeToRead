@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vpS-IJ-sVY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y5G-5d-5Yu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,25 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
-        <scene sceneID="dNZ-Qi-G75">
-            <objects>
-                <navigationController id="vpS-IJ-sVY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0dU-LV-pkT"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="tvf-3T-qZB">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="lcs-5S-T2v" kind="relationship" relationship="rootViewController" id="hgg-zf-Uu1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2EY-JE-djD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1186" y="1"/>
-        </scene>
-        <!--Current Page Collection View Controller-->
+        <!--Dados da Leitura-->
         <scene sceneID="cvF-uA-AN9">
             <objects>
                 <collectionViewController id="lcs-5S-T2v" customClass="CurrentPageCollectionViewController" customModule="timeToRead" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,11 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ake-Hf-VpG">
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="20" minimumInteritemSpacing="20" id="Ake-Hf-VpG">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Kpo-6I-glp">
@@ -54,14 +36,45 @@
                             <outlet property="delegate" destination="lcs-5S-T2v" id="niX-bZ-dsw"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="ljf-Uk-G3u"/>
+                    <navigationItem key="navigationItem" title="Dados da Leitura" largeTitleDisplayMode="never" id="ljf-Uk-G3u">
+                        <barButtonItem key="backBarButtonItem" title="Dados" id="QED-gw-mdc"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="currentPageCollection" destination="2wX-UX-gHG" id="ac2-Hv-Vqs"/>
+                        <segue destination="cYj-9h-t0p" kind="presentation" identifier="RunningTimeSegue" id="Iho-HC-nTA"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eh9-dg-MV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-312" y="1"/>
+            <point key="canvasLocation" x="466.66666666666669" y="-15.401785714285714"/>
+        </scene>
+        <!--RunningTime-->
+        <scene sceneID="21y-EW-toP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RunningTime" id="cYj-9h-t0p" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NNy-y2-a1D"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0Y-OB-RYs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1344.9275362318842" y="-60.267857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RKX-Kd-GQQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y5G-5d-5Yu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lKo-YN-7Ta">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lcs-5S-T2v" kind="relationship" relationship="rootViewController" id="S1Z-8d-BP8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pF7-55-6AY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-443.47826086956525" y="-15.401785714285714"/>
         </scene>
     </scenes>
 </document>

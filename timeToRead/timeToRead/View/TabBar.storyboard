@@ -6,6 +6,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--FinalPage-->
+        <scene sceneID="Qyo-ge-pxQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FinalPage" id="v9K-CM-Qf5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pMh-10-Iwl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQW-pu-U5L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1149" y="-275"/>
+        </scene>
+        <!--Result-->
+        <scene sceneID="PUo-5k-JjQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Result" id="hJu-gT-1Dy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="5cl-XS-DxF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qMf-ad-CH7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1725" y="-511"/>
+        </scene>
         <!--CurrentPage-->
         <scene sceneID="gxn-yM-LYy">
             <objects>
@@ -14,7 +34,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QiK-FK-Msi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1533" y="-291"/>
+            <point key="canvasLocation" x="-1463" y="-287"/>
         </scene>
         <!--Time-->
         <scene sceneID="gXl-gR-DZW">
@@ -49,6 +69,8 @@
                         <segue destination="gY2-xw-gqh" kind="relationship" relationship="viewControllers" id="8BH-Bs-l2x"/>
                         <segue destination="6RJ-jN-WWL" kind="relationship" relationship="viewControllers" id="Ije-2x-PMM"/>
                         <segue destination="3uC-gd-qsY" kind="relationship" relationship="viewControllers" id="uGz-wl-PQR"/>
+                        <segue destination="v9K-CM-Qf5" kind="relationship" relationship="viewControllers" id="W6c-Ac-iU6"/>
+                        <segue destination="hJu-gT-1Dy" kind="relationship" relationship="viewControllers" id="kAG-CU-USD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0f8-4b-dXs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
