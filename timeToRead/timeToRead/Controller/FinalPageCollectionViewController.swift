@@ -12,7 +12,7 @@ private let reuseIdentifier = "Cell"
 
 class FinalPageCollectionViewController: UICollectionViewController, StartButtonDelegate, textFieldData, UISearchBarDelegate, UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        print("oi")
+//        print("oi")
     }
     
     @IBOutlet var finalPageCollection: UICollectionView!
@@ -74,16 +74,16 @@ class FinalPageCollectionViewController: UICollectionViewController, StartButton
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searched = searchController.searchBar.text else{fatalError("error")}
         let searchReplace = searched.replacingOccurrences(of: " ", with: "+")
-        print(searchReplace)
+//        print(searchReplace)
         ApiManager().booksApi(searchItens: searchReplace) { (result) in
             switch result {
             case .success(let book):
-                print(book)
+//                print(book)
                 guard let title = book[0].volumeInfo.title else {fatalError("error")}
                 guard let page = book[0].volumeInfo.pageCount else {fatalError("Error")}
                 guard let author = book[0].volumeInfo.authors[0] else {fatalError("Error")}
 
-                print(page, title, author)
+//                print(page, title, author)
                 Reading.shared.totalPage = page
                 Reading.shared.bookTitle = title
                 Reading.shared.bookAuthor = author

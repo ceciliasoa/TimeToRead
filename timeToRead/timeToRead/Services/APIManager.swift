@@ -30,8 +30,8 @@ struct ApiManager: Codable {
             }
             
             guard let response = response as? HTTPURLResponse else {return}
-            print(response)
-            print(response.statusCode)
+//            print(response)
+//            print(response.statusCode)
             switch response.statusCode {
             case 200:
                 if let data = data {

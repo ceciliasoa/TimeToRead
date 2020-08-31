@@ -86,43 +86,43 @@ class Reading {
 //        let hourTime = Int((duration.truncatingRemainder(dividingBy: 86400)) / 360)
         let minuteTime = duration / 60
         let rounded = round(minuteTime * 100) / 100
-        var time = readed / rounded
-        print(time)
+        let time = readed / rounded
+//        print(time)
         let totalTime = (Double(totalPage) / time) * 60
-        print(totalTime)
+//        print(totalTime)
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .full // Use the appropriate positioning for the current locale
         formatter.allowedUnits = [ .hour, .minute ] // Units to display in the formatted string
 //        formatter.zeroFormattingBehavior = [ .pad ] // Pad with zeroes where appropriate for the locale
         let formattedDuration = formatter.string(from: totalTime)
-        print(formattedDuration)
+//        print(formattedDuration)
         guard let formatted = formattedDuration else {fatalError("error")}
         return formatted
         
     }
     
 }
-
-class Duration {
-    var timerDuration: Double?
-    
-    static var shared = Duration()
-    
-    func getDuration() -> Double {
-        guard let duration = timerDuration else {fatalError("error")}
-        return duration
-        
-    }
-    func convertDuration() -> String{
-        let formatter = DateComponentsFormatter()
-        formatter.unitsStyle = .positional // Use the appropriate positioning for the current locale
-        formatter.allowedUnits = [.minute, .second ] // Units to display in the formatted string
-        formatter.zeroFormattingBehavior = [ .pad ] // Pad with zeroes where appropriate for the locale
-        let formattedDuration = formatter.string(from: timerDuration ?? 0.0)
-        
-        guard let formatted = formattedDuration else {fatalError("error")}
-        return formatted
-    }
-}
+//
+//class Duration {
+//    var timerDuration: Double?
+//    
+//    static var shared = Duration()
+//    
+//    func getDuration() -> Double {
+//        guard let duration = timerDuration else {fatalError("error")}
+//        return duration
+//        
+//    }
+//    func convertDuration() -> String{
+//        let formatter = DateComponentsFormatter()
+//        formatter.unitsStyle = .positional // Use the appropriate positioning for the current locale
+//        formatter.allowedUnits = [.minute, .second ] // Units to display in the formatted string
+//        formatter.zeroFormattingBehavior = [ .pad ] // Pad with zeroes where appropriate for the locale
+//        let formattedDuration = formatter.string(from: timerDuration ?? 0.0)
+//        
+//        guard let formatted = formattedDuration else {fatalError("error")}
+//        return formatted
+//    }
+//}
 
 
